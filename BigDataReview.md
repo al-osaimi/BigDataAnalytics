@@ -2,15 +2,15 @@
 
 ## Q1: True/False
 
-### 1. Concepts & Examples
-
-#### 3Vs:
+### 1. 3Vs
 
 - **Volume:** Massive data scale (e.g., terabytes to petabytes)
 - **Velocity:** Real-time data generation (e.g., sensors, streams)
 - **Variety:** Multiple formats (structured, semi-structured, unstructured)
 
 ---
+
+### 2. Models
 
 - **Classification**: Assigning data to predefined categories.
 
@@ -41,8 +41,7 @@
 | K-Means        | Unsupervised clustering algorithm that partitions data into K groups | Customer segmentation                    |
 | Naive Bayes    | Probabilistic classifier based on Bayes Theorem                      | Sentiment analysis                       |
 
-
-### 2. Naive Bayes Dependency
+### 3. Naive Bayes Dependency
 
 - Based on **Bayes Theorem**
 - Assumes **independent features**
@@ -93,15 +92,15 @@ Lifecycle:
 
 ### 6. MapReduce Model:
 
-- Map: Breaks input into key-value pairs
-- Shuffle/Sort: Groups and sorts data
-- Reduce: Aggregates and summarizes results
+- **Map**: Breaks input into key-value pairs
+- **Shuffle/Sort**: Groups and sorts data
+- **Reduce**: Aggregates and summarizes results
 
 ### 7. Data Storage Options:
 
-• HDFS: Distributed file system
-• Data Lakes: Centralized storage of raw data
-• Data Warehouses: Structured historical data
+- **HDFS**: Distributed file system
+- **Data Lakes**: Centralized storage of raw data
+- **Data Warehouses**: Structured historical data
 
 ### 8. ETL vs ELT/ETLT
 
@@ -137,16 +136,9 @@ Lifecycle:
 
 ### 4. Pig vs Hive
 
-- **Apache Hive:** Hive provides a data warehouse infrastructure built on top of Hadoop, enabling data summarization, querying, and analysis of large datasets
+- **Apache Hive:** Hive provides a _data warehouse_ infrastructure built on _top of Hadoop_, enabling data summarization, querying, and analysis of large datasets
 
-  - SQL-like query engine
-  - Used for batch processing
-  - Language: HiveQL
-
-- **Apache Pig:** Pig is used for the analysis of a large amount of data focused on data flows
-  - ETL scripting tool
-  - Language: Pig Latin
-  - Procedural vs Hive's declarative model
+- **Apache Pig:** Pig is focused on data flows used for the _analysis_ of a large amount of data
 
 | Feature       | Hive                 | Pig                    |
 | ------------- | -------------------- | ---------------------- |
@@ -168,34 +160,23 @@ _The Shuffle and Sort Phase occur in between the Map and Reduce Phases_
 
 ### 6. Association Rules
 
-Association rules are if-then patterns that reveal relationships between seemingly unrelated data in large datasets. 
+Association rules are if-then patterns that reveal relationships between seemingly unrelated data in large datasets.
 
 - #### Apriori Algorithm:
 
 Measuring Association Strength by:
 
-1. **Support**: The fraction of transactions containing both A and B. 
-  -  Indicates how common the rule is in the dataset. *Higher support means the association occurs more frequently.*
-2. **Confidence**: The likelihood of B occurring when A occurs. 
-  - Measures the reliability of the inference made by the rule *Higher confidence indicates stronger association.*
-3. **Lift**: How much more likely A and B occur together than expected if they were independent 
-  -  Measures how far from independence the rule is *Lift > 1 indicates positive correlation.*
+1. **Support**: The fraction of transactions containing both A and B.
 
+- Indicates how common the rule is in the dataset. _Higher support means the association occurs more frequently._
 
-### 7. Clustering vs Classification
+2. **Confidence**: The likelihood of B occurring when A occurs.
 
-| Feature | Clustering   | Classification |
-| ------- | ------------ | -------------- |
-| Type    | Unsupervised | Supervised     |
-| Labels  | No           | Yes            |
+- Measures the reliability of the inference made by the rule _Higher confidence indicates stronger association._
 
-### 8. Spark vs Hadoop
+3. **Lift**: How much more likely A and B occur together than expected if they were independent
 
-| Feature  | Spark         | Hadoop     |
-| -------- | ------------- | ---------- |
-| Memory   | In-memory     | Disk-based |
-| Speed    | Fast          | Slower     |
-| Use Case | ML, streaming | Batch jobs |
+- Measures how far from independence the rule is _Lift > 1 indicates positive correlation._
 
 ### 9.Parallel Databases vs. MapReduce
 
@@ -205,7 +186,6 @@ Feature Parallel Databases MapReduce
 Data Structure | Structured (SQL) | Structured + Unstructured
 Processing | Model Query-driven | Distributed Computation
 Performance | High for structured data | Efficient for large-scale analytics
-
 
 ---
 
@@ -227,6 +207,7 @@ Key Activities:
 In this phase focuses on data preparation, including setting up the analytic sandbox and performing ETLT
 
 Tasks:
+
 - Establish Analytic Sandbox
 - Data Wrangling/Cleaning (handle nulls, duplicates)
 - Pattern Visualization
@@ -269,11 +250,14 @@ Operationalize, the team communicates the benefits of the project more broadly a
 - Model Deployment
 - Documentation
 
+---
 ### 2. Hospital Dataset Example
 
 **Dataset**: `PatientID, Age, Symptoms, Diagnosis, AdmissionDate, HospitalLocation`
 
 **2.1 Data Cleaning**:
+
+Data cleaning is the process of fixing or removing incorrect, corrupted, incorrectly formatted, duplicate, or incomplete data within a dataset *(use tool like Panda)*. 
 
 - Remove duplicates
 - Handle nulls
@@ -287,6 +271,8 @@ Operationalize, the team communicates the benefits of the project more broadly a
 **2.3 Prediction**:
 
 - Predict disease severity or re-admission risk
+
+---
 
 ### 3. Ministry of Tourism Example
 
@@ -306,7 +292,7 @@ Operationalize, the team communicates the benefits of the project more broadly a
 
 - Use fault-tolerant distributed systems
 - Automate anomaly alerts
-- Ensure scalability using distributed storage system (hadoop) of cloud infrastructure
+- Ensure scalability using distributed storage system (hadoop) or cloud infrastructure
 
 ## Q5: SQL Task
 
